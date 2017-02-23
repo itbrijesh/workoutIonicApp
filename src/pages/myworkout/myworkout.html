@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Workouts
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <ion-list *ngIf="workouts">
+        <ion-item *ngFor='let workout of workouts' (click)='onClickOfWorkout($event,workout)'>
+            {{workout.title}}
+        </ion-item>
+    </ion-list>
+
+</ion-content>
